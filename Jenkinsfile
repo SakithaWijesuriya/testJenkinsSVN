@@ -25,6 +25,10 @@ pipeline {
         stage('3') {
           steps {
             echo '3'
+            timeout(time: 1, unit: 'MINUTES') {
+              echo 'ssssss'
+            }
+            
           }
         }
         stage('5') {
