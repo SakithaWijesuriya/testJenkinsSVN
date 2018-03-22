@@ -33,7 +33,10 @@ pipeline {
         }
         stage('5') {
           steps {
-            echo '5'
+            retry(count: 3) {
+              echo 'retry'
+            }
+            
           }
         }
       }
