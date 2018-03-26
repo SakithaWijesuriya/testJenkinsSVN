@@ -2,8 +2,20 @@ pipeline {
   agent any
   stages {
     stage('1') {
-      steps {
-        echo '1'
+      parallel {
+        stage('1') {
+          steps {
+            echo '1'
+          }
+        }
+        stage('2') {
+          steps {
+            node(label: '3333333') {
+              echo 'node ALLOCATE'
+            }
+            
+          }
+        }
       }
     }
     stage('3') {
