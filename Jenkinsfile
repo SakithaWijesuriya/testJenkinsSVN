@@ -16,11 +16,6 @@ pipeline {
             
           }
         }
-        stage('send mail') {
-          steps {
-            mail(subject: 'test', body: 'testbody', to: 'snwijesuriya@virtusa.com', bcc: '""', cc: '""', charset: '""', from: 'snwijesuriya@virtusa.com', mimeType: '""', replyTo: '""')
-          }
-        }
       }
     }
     stage('3') {
