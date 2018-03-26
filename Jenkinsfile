@@ -14,6 +14,9 @@ pipeline {
           }
         }
         stage('4') {
+          environment {
+            t = '6'
+          }
           steps {
             sleep 5
           }
