@@ -16,6 +16,11 @@ pipeline {
             
           }
         }
+        stage('bulidjob') {
+          steps {
+            build(job: '1', quietPeriod: 2, wait: true)
+          }
+        }
       }
     }
     stage('3') {
