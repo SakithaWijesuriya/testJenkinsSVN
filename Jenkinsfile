@@ -10,7 +10,7 @@ pipeline {
         }
         stage('2') {
           steps {
-            bat(script: '@ECHO OFF ECHO Hello World! PAUSE', returnStatus: true, encoding: 'bye')
+            bat(script: '@ECHO OFF ECHO Hello World! PAUSE', encoding: 'bye', returnStdout: true)
           }
         }
       }
