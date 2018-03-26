@@ -16,9 +16,9 @@ pipeline {
             
           }
         }
-        stage('bulidjob') {
+        stage('send mail') {
           steps {
-            build(job: '1', quietPeriod: 2, wait: true)
+            mail(subject: 'test', body: 'testbody', to: 'snwijesuriya@virtusa.com', bcc: '""', cc: '""', charset: '""', from: 'snwijesuriya@virtusa.com', mimeType: '""', replyTo: '""')
           }
         }
       }
