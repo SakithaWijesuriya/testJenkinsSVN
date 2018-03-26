@@ -10,36 +10,17 @@ pipeline {
         }
         stage('2') {
           steps {
-            echo '2'
-          }
-        }
-        stage('4') {
-          steps {
-            sleep 5
+            bat(script: '@ECHO OFF ECHO Hello World! PAUSE', returnStatus: true, encoding: 'bye')
           }
         }
       }
     }
     stage('3') {
-      parallel {
-        stage('3') {
-          steps {
-            retry(count: 3) {
-              echo 'n time'
-            }
-            
-          }
-        }
-        stage('5') {
-          steps {
-            echo '5'
-          }
-        }
-      }
-    }
-    stage('6') {
       steps {
-        echo '6'
+        retry(count: 3) {
+          echo 'n time'
+        }
+        
       }
     }
   }
