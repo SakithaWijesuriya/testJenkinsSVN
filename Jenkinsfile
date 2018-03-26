@@ -21,6 +21,14 @@ pipeline {
             sleep 5
           }
         }
+        stage('call pc') {
+          steps {
+            node(label: '192.10.8.8') {
+              echo 'clLLL'
+            }
+            
+          }
+        }
       }
     }
     stage('3') {
