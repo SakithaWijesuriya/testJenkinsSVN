@@ -24,9 +24,8 @@ pipeline {
       parallel {
         stage('3') {
           steps {
-            echo '3'
-            timeout(time: 2, unit: 'SECONDS') {
-              sleep 3
+            retry(count: 3) {
+              echo 'n time'
             }
             
           }
