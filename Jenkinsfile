@@ -10,8 +10,8 @@ pipeline {
         }
         stage('2') {
           steps {
-            node(label: '3333333') {
-              echo 'node ALLOCATE'
+            node(label: '2') {
+              echo 'node allocate'
             }
             
           }
