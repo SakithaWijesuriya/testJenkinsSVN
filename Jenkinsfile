@@ -6,9 +6,9 @@ pipeline {
         echo '1'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        tempoTool 'C:\\Sakitha\\apache-tomcat-8.0.50\\bin'
+        tempoTool 'C:\\Sakitha\\apache-tomcat-8.0.50'
       }
     }
   }
